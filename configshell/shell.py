@@ -201,6 +201,7 @@ class ConfigShell:
                 self.prefs[pref] = value
 
         self.con = console.Console()
+
     # Private methods
     def _display_completions(self, substitution, matches, max_length):  # noqa: ARG002 TODO
         '''
