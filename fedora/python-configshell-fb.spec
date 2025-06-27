@@ -38,6 +38,8 @@ Requires:       python3-pyparsing >= 2.4.7
 %prep
 %autosetup -n %{upstream_name}-%{version}
 rm -rf %{upstream_name}.egg-info
+# Create symbolic link for backward compatibility with configshell_fb imports
+ln -snf configshell configshell_fb
 
 %build
 %pyproject_wheel
