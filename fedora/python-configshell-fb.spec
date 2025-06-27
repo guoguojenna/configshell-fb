@@ -35,6 +35,8 @@ but nice CLI-based applications.
 %prep
 %autosetup -n %{upstream_name}-%{version}
 rm -rf %{upstream_name}.egg-info
+# Create symbolic link for backward compatibility with configshell_fb imports
+ln -snf configshell configshell_fb
 
 %build
 %pyproject_wheel
